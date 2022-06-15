@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burger</title>
+    <style>
+        .menu {
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            padding: 40px;
+            background-color: grey;
+            transition: transform .3s ease-in-out;
+            transform: translateX(-101%);
+        }
+        .menu.is-active {
+            transform: none;
+        }
+        .burger {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background-color: antiquewhite;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+        .alert {
+            outline: 3px solid brown;
+            color: red;
+        }
+    </style>
+<script src="js-burger.js"></script>
+</head>
+<body>
+  <div id="menu" class="menu is-active">
+ <ul>
+     <li>menu1</li>
+     <li>menu2</li>
+     <li>menu3</li>
+ </ul>
+  </div>
+  <div id="burger" class="burger"></div>
+  <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat molestiae adipisci doloribus beatae, ipsam deleniti ut quidem aspernatur, dolores ipsa nostrum aliquam esse laudantium, impedit labore atque ad. Ab, ipsa!</p>  
+</body>
+</html>
