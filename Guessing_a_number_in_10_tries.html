@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guessing</title>
+</head>
+<body>
+  <script>
+function ramdomNum() {
+    let num = Math.floor(Math.random()*100);
+    for (let count = 1; count<=10; count++) {
+      let result = +prompt(`Попытка №${count}, Введите число:`);
+      if (result == num) {
+        return alert (`Вы угадали число! Попыток: ${count}, Число: ${num}`)
+      } else if(result < num) {alert(`Ваше число ${result} меньше загаданного!`)} 
+      else if(result > num) {alert(`Ваше число ${result} больше загаданного!`)}
+      
+    }
+    return alert (`Вы не угадали число! Число: ${num}`)
+  }
+
+  ramdomNum();
+  </script>
+</body>
+</html>
